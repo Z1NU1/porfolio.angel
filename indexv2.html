@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angel Usi — Digital Noir Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div id="pg-bar"></div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- ─── LOADER ──────────────────────────────────────────────────────── -->
+<div id="loader">
+  <div class="ld-wordmark" id="ldWord"><span class="dim">_</span></div>
+  <div class="ld-bar-wrap"><div class="ld-bar-fill" id="ldFill"></div></div>
+  <div class="ld-pct" id="ldPct">0%</div>
+</div>
+
+<!-- ─── OVERLAY NAV ──────────────────────────────────────────────────── -->
+<div id="overlay">
+  <div class="ov-links">
+    <a href="#about"   class="ov-link" onclick="closeOv()"><span class="ov-num">01</span>About</a>
+    <a href="#work"    class="ov-link" onclick="closeOv()"><span class="ov-num">02</span>Work</a>
+    <a href="#skills"  class="ov-link" onclick="closeOv()"><span class="ov-num">03</span>Skills</a>
+    <a href="#contact" class="ov-link" onclick="closeOv()"><span class="ov-num">04</span>Contact</a>
+  </div>
+  <p class="ov-footer">ESC or MENU to close</p>
+</div>
+
+<!-- ─── NAV ─────────────────────────────────────────────────────────── -->
+<nav>
+  <a class="nav-logo" href="#">
+    <span class="logo-pip"></span>Angel Usi
+  </a>
+  <button class="nav-trigger" id="menuBtn" aria-label="Toggle menu">
+    <div class="trigger-bars"><span></span><span></span><span></span></div>
+    <span id="menuLbl">MENU</span>
+  </button>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="h-mesh">
+    <div class="h-orb h-orb-1"></div>
+    <div class="h-orb h-orb-2"></div>
+    <div class="h-orb h-orb-3"></div>
+  </div>
+  <div class="h-grid"></div>
+
+  <div class="h-left">
+    <p class="h-eyebrow">BSIT Student &nbsp;·&nbsp; Pampanga, PH</p>
+    <h1 class="h-name">
+      <span class="h-name-solid">ANGEL</span>
+      <span class="h-name-outline"><span>USI</span></span>
+    </h1>
+    <p class="h-type" id="hType"></p>
+    <div class="h-ctas">
+      <a href="#work"    class="btn-grad">View Work →</a>
+      <a href="#contact" class="btn-wire">Get in Touch</a>
+    </div>
+    <div class="h-stats">
+      <div><div class="h-stat-n">2+</div><div class="h-stat-l">Live Projects</div></div>
+      <div><div class="h-stat-n">4+</div><div class="h-stat-l">Core Skills</div></div>
+      <div><div class="h-stat-n">∞</div><div class="h-stat-l">Curiosity</div></div>
+    </div>
+  </div>
+
+  <div class="h-right">
+    <div class="h-photo-wrap">
+      <div class="h-photo-inner">
+        <img src="angel.jpg" alt="Angel Usi">
+        <div class="h-photo-grad"></div>
+        <div class="h-photo-tag">
+          <div><div class="h-pt-name">Angel Usi</div><div class="h-pt-role">BSIT Student</div></div>
+          <div class="h-pt-year">2026</div>
+        </div>
+      </div>
+      <div class="corner c-tl"></div><div class="corner c-tr"></div>
+      <div class="corner c-bl"></div><div class="corner c-br"></div>
+      <div class="h-avail"><span class="avail-pip"></span><span>Available</span></div>
+    </div>
+  </div>
+
+  <div class="h-scroll">
+    <span class="h-scroll-lbl">Scroll</span>
+    <div class="h-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─────────────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="s-watermark">01</div>
+  <div class="about-grid">
+    <div>
+      <p class="s-label reveal"><span class="n">01 —</span>&nbsp;About</p>
+      <h2 class="about-h reveal">
+        Crafting<br>
+        <span class="grad">Digital</span>
+        Experiences.
+      </h2>
+      <p class="about-p reveal">
+        I'm Angel Usi — a BSIT student from Pampanga with a genuine obsession for the space where logic meets design. I build systems that work, and make them look like they mean it.
+      </p>
+      <p class="about-p reveal">
+        Whether I'm architecting a web application, framing a photograph, or refining a UI — the discipline is always the same: understand the problem deeply, then solve it beautifully.
+      </p>
+      <div class="chips reveal">
+        <span class="chip">BSIT Student</span>
+        <span class="chip">Problem Solver</span>
+        <span class="chip">Visual Creator</span>
+        <span class="chip">Tech Curious</span>
+      </div>
+    </div>
+
+    <div class="reveal" style="padding-top:2.5rem;">
+      <div class="traits">
+        <div class="trait-row">
+          <span class="tr-name">Student</span>
+          <span class="tr-tag">Learning</span>
+        </div>
+        <div class="trait-row">
+          <span class="tr-name">Problem Solver</span>
+          <span class="tr-tag">Technology</span>
+        </div>
+        <div class="trait-row">
+          <span class="tr-name">Visual Creator</span>
+          <span class="tr-tag">Design</span>
+        </div>
+        <div class="trait-row">
+          <span class="tr-name">Detail Obsessed</span>
+          <span class="tr-tag">Precision</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WORK ──────────────────────────────────────────────────────────── -->
+<section id="work">
+  <div class="work-hdr reveal">
+    <div>
+      <p class="s-label"><span class="n">02 —</span>&nbsp;Selected Work</p>
+      <h2 class="work-h">Projects.</h2>
+    </div>
+    <span class="work-hint">Drag</span>
+  </div>
+
+  <div class="proj-scroll reveal" id="projScroll">
+
+    <!-- Card 1 -->
+    <a href="https://clinicgnc.infinityfreeapp.com/" target="_blank" rel="noopener" class="p-card">
+      <div class="p-img">
+        <img src="med.jpg" alt="Medical Management System"
+          onerror="this.closest('.p-img').outerHTML='<div class=\'p-fallback\'><div class=\'p-fallback-glyph\'>MED</div></div>'">
+        <span class="p-num">01 / 02</span>
+      </div>
+      <div class="p-body">
+        <h3 class="p-title">Medical Management System</h3>
+        <p class="p-desc">A full-featured clinic platform for patients and healthcare staff — appointments, records, and service workflows in one clean interface.</p>
+        <div class="p-tags">
+          <span class="p-tag">Web Dev</span>
+          <span class="p-tag">Healthcare</span>
+          <span class="p-tag">2026</span>
+        </div>
+      </div>
+      <span class="p-cta">↗</span>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="https://arthur1030.github.io/Pee-Queue/index.html" target="_blank" rel="noopener" class="p-card">
+      <div class="p-img">
+        <img src="peequeue.png" alt="PeeQueue System"
+          onerror="this.closest('.p-img').outerHTML='<div class=\'p-fallback\'><div class=\'p-fallback-glyph\'>PQ</div></div>'">
+        <span class="p-num">02 / 02</span>
+      </div>
+      <div class="p-body">
+        <h3 class="p-title">PeeQueue System</h3>
+        <p class="p-desc">Real-time queue management that brings order to chaos — reducing confusion and giving users live clarity on their position in any line.</p>
+        <div class="p-tags">
+          <span class="p-tag">Web Dev</span>
+          <span class="p-tag">Real-time</span>
+          <span class="p-tag">2026</span>
+        </div>
+      </div>
+      <span class="p-cta">↗</span>
+    </a>
+
+    <!-- Ghost card -->
+    <div class="p-ghost">
+      <div class="p-ghost-inner">
+        <div class="p-ghost-sym">+</div>
+        <div class="p-ghost-lbl">More<br>Coming Soon</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── SKILLS ────────────────────────────────────────────────────────── -->
+<section id="skills">
+  <div class="skills-grid">
+    <div>
+      <p class="s-label reveal"><span class="n">03 —</span>&nbsp;Expertise</p>
+      <h2 class="sk-h reveal">My<br><span class="grad-line">Skill<br>Set.</span></h2>
+      <p class="sk-note reveal">A toolkit built on formal study and relentless self-learning — always growing, always iterating.</p>
+    </div>
+
+    <div class="ring-grid reveal" id="ringGrid">
+
+      <div class="ring-block">
+        <div class="ring-svg-wrap">
+          <svg class="r-svg" viewBox="0 0 70 70">
+            <defs><linearGradient id="rg1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7B5EFC"/><stop offset="100%" stop-color="#00CEB5"/>
+            </linearGradient></defs>
+            <circle class="r-bg" cx="35" cy="35" r="29"/>
+            <circle class="r-fill" cx="35" cy="35" r="29" data-p="90" stroke="url(#rg1)"/>
+          </svg>
+          <div class="r-pct" data-v="90">0%</div>
+        </div>
+        <div class="ring-meta">
+          <div class="r-name">Photography</div>
+          <div class="r-sub">Composition &amp; Visual Story</div>
+        </div>
+      </div>
+
+      <div class="ring-block">
+        <div class="ring-svg-wrap">
+          <svg class="r-svg" viewBox="0 0 70 70">
+            <defs><linearGradient id="rg2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7B5EFC"/><stop offset="100%" stop-color="#00CEB5"/>
+            </linearGradient></defs>
+            <circle class="r-bg" cx="35" cy="35" r="29"/>
+            <circle class="r-fill" cx="35" cy="35" r="29" data-p="88" stroke="url(#rg2)"/>
+          </svg>
+          <div class="r-pct" data-v="88">0%</div>
+        </div>
+        <div class="ring-meta">
+          <div class="r-name">Canva Design</div>
+          <div class="r-sub">Graphics &amp; Layouts</div>
+        </div>
+      </div>
+
+      <div class="ring-block">
+        <div class="ring-svg-wrap">
+          <svg class="r-svg" viewBox="0 0 70 70">
+            <defs><linearGradient id="rg3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7B5EFC"/><stop offset="100%" stop-color="#00CEB5"/>
+            </linearGradient></defs>
+            <circle class="r-bg" cx="35" cy="35" r="29"/>
+            <circle class="r-fill" cx="35" cy="35" r="29" data-p="82" stroke="url(#rg3)"/>
+          </svg>
+          <div class="r-pct" data-v="82">0%</div>
+        </div>
+        <div class="ring-meta">
+          <div class="r-name">UI Design</div>
+          <div class="r-sub">Interfaces That Feel Right</div>
+        </div>
+      </div>
+
+      <div class="ring-block">
+        <div class="ring-svg-wrap">
+          <svg class="r-svg" viewBox="0 0 70 70">
+            <defs><linearGradient id="rg4" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7B5EFC"/><stop offset="100%" stop-color="#00CEB5"/>
+            </linearGradient></defs>
+            <circle class="r-bg" cx="35" cy="35" r="29"/>
+            <circle class="r-fill" cx="35" cy="35" r="29" data-p="92" stroke="url(#rg4)"/>
+          </svg>
+          <div class="r-pct" data-v="92">0%</div>
+        </div>
+        <div class="ring-meta">
+          <div class="r-name">MS Office</div>
+          <div class="r-sub">Docs, Sheets &amp; Slides</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ───────────────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="ct-bg">HELLO</div>
+  <div class="ct-orb"></div>
+
+  <p class="ct-label reveal">04 — Let's Connect</p>
+  <h2 class="ct-big reveal">Start a<br><span class="grad">Conversation.</span></h2>
+  <a href="mailto:angelusi@gmail.com" class="ct-email reveal">angelusi@gmail.com</a>
+  <div class="ct-cta-wrap reveal">
+    <a href="mailto:angelusi@gmail.com" class="ct-cta">Send a Message →</a>
+  </div>
+  <div class="ct-row reveal">
+    <div class="ct-item">
+      <div class="ct-lbl">Phone</div>
+      <div class="ct-val">+63 912 345 6789</div>
+    </div>
+    <div class="ct-item">
+      <div class="ct-lbl">Location</div>
+      <div class="ct-val">Pampanga, Philippines</div>
+    </div>
+    <div class="ct-item">
+      <div class="ct-lbl">Status</div>
+      <div class="ct-val online">● Open to opportunities</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="ft-logo">AU</span>
+  <span>&copy; 2026 Angel Usi. All rights reserved.</span>
+  <a href="#">↑ Back to top</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
