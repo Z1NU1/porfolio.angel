@@ -22,21 +22,28 @@ function scrambleFrame() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  const isMobile = window.matchMedia('(max-width: 650px)').matches;
+  const scrambleDelay = isMobile ? 35 : 55;
+  const resolveDelay  = isMobile ? 140 : 220;
+  const pctDelay      = isMobile ? 36 : 55;
+  const loaderDuration = isMobile ? 1600 : 3000;
+  const loaderFadeDelay = isMobile ? 350 : 650;
+
   requestAnimationFrame(() => { ldFill.style.width = '100%'; });
 
-  const scramble = setInterval(scrambleFrame, 55);
+  const scramble = setInterval(scrambleFrame, scrambleDelay);
 
   const resolve = setInterval(() => {
     resolved++;
     if (resolved >= TARGET.length) clearInterval(resolve);
-  }, 220);
+  }, resolveDelay);
 
   let pct = 0;
   const pctTick = setInterval(() => {
     pct = Math.min(pct + 2, 100);
     ldPct.textContent = pct + '%';
     if (pct >= 100) clearInterval(pctTick);
-  }, 55);
+  }, pctDelay);
 
   setTimeout(() => {
     clearInterval(scramble);
@@ -44,8 +51,8 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       loader.classList.add('gone');
       startTypewriter();
-    }, 650);
-  }, 3000);
+    }, loaderFadeDelay);
+  }, loaderDuration);
 });
 
 /* ─── TYPEWRITER HERO ───────────────────────────────────────────────── */
